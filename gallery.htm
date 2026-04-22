@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Hall — Галерея</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+<!-- РУНЫ НА ФОНЕ -->
+<div class="rune-futhark rune-1">ᚠ</div>
+<div class="rune-futhark rune-2">ᚢ</div>
+<div class="rune-futhark rune-3">ᚦ</div>
+<div class="rune-futhark rune-4">ᚨ</div>
+<div class="rune-futhark rune-5">ᚱ</div>
+<div class="rune-futhark rune-6">ᚲ</div>
+<div class="rune-futhark rune-7">ᚷ</div>
+<div class="rune-futhark rune-8">ᛟ</div>
+
+<header>
+    <div class="header-container">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="width: 150px; text-align: center;">
+                <img src="images/logo.png" alt="Saga Hall Logo" style="width: 120px; border: none;">
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <a href="index.htm" style="text-decoration: none;">
+                    <h1>ᛉ Saga Hall ᛟ</h1>
+                </a>
+            </div>
+            <div style="width: 150px;"></div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="index.htm">Главная</a>
+            <a href="mythology.htm">Мифология</a>
+            <a href="literature.htm">Литература</a>
+            <a href="games-films.htm">Игры & Фильмы</a>
+            <a href="gallery.htm">Галерея</a>
+            <a href="about.htm">О проекте</a>
+        </div>
+        <div class="search-box">
+            <form>
+                <input type="text" name="search" placeholder="Поиск...">
+                <input type="submit" value="Найти">
+            </form>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h1 data-aos="fade-up" style="text-align: center; margin: 30px 0 20px 0;">Галерея</h1>
+    <p data-aos="fade-up" style="text-align: center; margin-bottom: 30px;">Изображения богов, миров и рунических символов. Нажмите на изображение для увеличения.</p>
+
+    <!-- Раздел Один -->
+    <section style="margin: 20px auto; max-width: 1200px; padding: 0 20px;">
+        <h2 data-aos="fade-right">Один</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="images/odin-1.jpg" alt="Один с воронами" style="width: 100%; border: 2px solid #d4af37; border-radius: 10px; cursor: pointer;">
+                <p style="text-align: center; margin-top: 10px;"><strong>Один на троне Хлидскьяльв</strong><br>с воронами Хугин и Мунин. Художник: Георг фон Розен (XIX век).</p>
+            </div>
+            
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/odin-wanderer.jpg" alt="Один-странник" style="width: 100%; border: 2px solid #d4af37; border-radius: 10px; cursor: pointer;">
+                <p style="text-align: center; margin-top: 10px;"><strong>Один-странник</strong><br>в плаще и шляпе, с посохом. Образ из «Старшей Эдды».</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Тор -->
+    <section style="margin: 20px auto; max-width: 1200px; padding: 0 20px;">
+        <h2 data-aos="fade-left">Тор</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="images/thor-mjolnir.jpg" alt="Тор с молотом" style="width: 100%; border: 2px solid #d4af37; border-radius: 10px; cursor: pointer;">
+                <p style="text-align: center; margin-top: 10px;"><strong>Тор с Мьёльниром</strong><br>бой с великанами. Художник: Мортен Эскиль Винге.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Иггдрасиль -->
+    <section style="margin: 20px auto; max-width: 1200px; padding: 0 20px;">
+        <h2 data-aos="fade-right">Иггдрасиль</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="images/yggdrasil.jpg" alt="Мировое древо" style="width: 100%; border: 2px solid #d4af37; border-radius: 10px; cursor: pointer;">
+                <p style="text-align: center; margin-top: 10px;"><strong>Ясень Иггдрасиль</strong><br>девять миров и животные у корней.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Руны -->
+    <section style="margin: 20px auto; max-width: 1200px; padding: 0 20px;">
+        <h2 data-aos="fade-left">Руны</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="images/rune-stone.jpg" alt="Рунический камень" style="width: 100%; border: 2px solid #d4af37; border-radius: 10px; cursor: pointer;">
+                <p style="text-align: center; margin-top: 10px;"><strong>Рунический камень из Еллинга</strong><br>Дания, X век.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<hr class="divider">
+
+<footer>
+    <div class="footer-text">© 2026 Saga Hall. Автор проекта: Попов Денис Александрович</div>
+    <div class="footer-text">Источники: <a href="https://norroen.info/" target="_blank">Северная слава</a> | <a href="https://ru.wikipedia.org/" target="_blank">Wikipedia</a> | Переводы Эдд: О. Смирницкая, М. Стеблин-Каменский</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

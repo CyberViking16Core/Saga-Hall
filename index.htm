@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Hall — Чертоги скандинавской мифологии</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Glide.js для слайдера отзывов -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.5.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+</head>
+<body>
+
+<!-- РУНЫ НА ФОНЕ -->
+<div class="rune-futhark rune-1">ᚠ</div>
+<div class="rune-futhark rune-2">ᚢ</div>
+<div class="rune-futhark rune-3">ᚦ</div>
+<div class="rune-futhark rune-4">ᚨ</div>
+<div class="rune-futhark rune-5">ᚱ</div>
+<div class="rune-futhark rune-6">ᚲ</div>
+<div class="rune-futhark rune-7">ᚷ</div>
+<div class="rune-futhark rune-8">ᛟ</div>
+
+<header>
+    <div class="header-container">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="width: 150px; text-align: center;">
+                <img src="images/logo.png" alt="Saga Hall Logo" style="width: 120px; border: none;">
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <a href="index.htm" style="text-decoration: none;">
+                    <h1>ᛉ Saga Hall ᛟ</h1>
+                </a>
+            </div>
+            <div style="width: 150px;"></div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="index.htm">Главная</a>
+            <a href="mythology.htm">Мифология</a>
+            <a href="literature.htm">Литература</a>
+            <a href="games-films.htm">Игры & Фильмы</a>
+            <a href="gallery.htm">Галерея</a>
+            <a href="about.htm">О проекте</a>
+        </div>
+        <div class="search-box">
+            <form>
+                <input type="text" name="search" placeholder="Поиск...">
+                <input type="submit" value="Найти">
+            </form>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- ГЕРОИЧЕСКИЙ БЛОК -->
+    <div class="hero-block" data-aos="fade-down">
+        <div class="hero-content">
+            <h1 class="hero-title">Добро пожаловать в Saga Hall</h1>
+            <p class="hero-text">Чертоги, где хранятся саги, мифы и знания о богах Севера.<br>
+            Здесь ты найдёшь всё: от деяний Одина до сказаний о Рагнарёке.</p>
+            
+            <div class="quote-block" id="quoteBlock">
+                <div class="quote-text">«Ветви шумят над главою певца,<br>
+                струны гудят, вдохновенный, воспой<br>
+                славу богам и героям!»</div>
+                <div class="quote-author">— Старшая Эдда, «Прорицание вёльвы»</div>
+                <button id="copyQuoteBtn" style="margin-top: 15px; padding: 5px 15px; background: #d4af37; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">📋 Копировать цитату</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- РУНА ДНЯ + СИМВОЛ ДНЯ (в одну строку) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 20px auto; max-width: 900px;">
+        <div id="rune-widget-container" style="flex: 1; min-width: 250px;"></div>
+        <div id="symbol-widget-container" style="flex: 1; min-width: 250px;"></div>
+    </div>
+
+    <!-- ЦИТАТА ДНЯ -->
+    <div id="quote-of-the-day" data-aos="fade-up" style="max-width: 600px; margin: 20px auto; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 15px; text-align: center; border-left: 4px solid #d4af37;">
+        <!-- Заполняется из JS -->
+    </div>
+
+    <!-- ТАЙМЕР ДО РАГНАРЁКА -->
+    <div data-aos="fade-up" style="text-align: center; margin: 30px auto; padding: 20px; max-width: 400px; background: rgba(0,0,0,0.3); border-radius: 15px;">
+        <h3 style="margin-bottom: 15px;">⌛ До Рагнарёка осталось:</h3>
+        <div id="ragnarokTimer" style="font-size: 28px; font-family: monospace; color: #ff6600; text-shadow: 0 0 10px #ff3300;"></div>
+        <p style="font-size: 14px; margin-top: 10px;">*по легендам, точная дата неизвестна</p>
+    </div>
+
+    <!-- ТАЙМЕР ДО СКАНДИНАВСКОГО ПРАЗДНИКА -->
+    <div data-aos="fade-up" style="text-align: center; margin: 20px auto; padding: 20px; max-width: 400px; background: rgba(0,0,0,0.3); border-radius: 15px;">
+        <h3 style="margin-bottom: 10px;">🎉 Ближайший праздник викингов</h3>
+        <div id="holiday-name" style="font-size: 22px; color: #d4af37; font-weight: bold;">Загрузка...</div>
+        <div id="holiday-desc" style="font-size: 14px; margin: 10px 0;"></div>
+        <div id="holiday-countdown" style="font-size: 24px; font-family: monospace; color: #ffaa00;"></div>
+        <p style="font-size: 12px; margin-top: 10px;">📅 По древнескандинавскому календарю</p>
+    </div>
+
+    <!-- ПОГОДА В ОСЛО -->
+    <div data-aos="fade-up" style="text-align: center; margin: 20px auto; padding: 15px; max-width: 400px; background: rgba(0,0,0,0.3); border-radius: 15px;">
+        <h3 style="margin-bottom: 10px;">🌦️ Погода в Осло</h3>
+        <div id="oslo-weather">Загрузка...</div>
+    </div>
+
+    <hr class="divider" data-aos="fade-in">
+
+    <h2 data-aos="fade-up">Залы Saga Hall</h2>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 20px;">
+        <div class="section-card" data-aos="fade-up" data-aos-delay="0" style="flex: 1; min-width: 200px; max-width: 23%;">
+            <h3 class="section-title">⚡ Мифология</h3>
+            <p class="section-text">Полное описание пантеона: Один, Тор, Фрейя, Локи и другие. Девять миров, чудовища, герои и судьба богов в Рагнарёк.</p>
+            <a href="mythology.htm" class="section-link">Войти в чертоги →</a>
+        </div>
+        <div class="section-card" data-aos="fade-up" data-aos-delay="100" style="flex: 1; min-width: 200px; max-width: 23%;">
+            <h3 class="section-title">📖 Литература</h3>
+            <p class="section-text">Старшая Эдда, Младшая Эдда, Саги об исландцах, Беовульф, Калевала и современные пересказы.</p>
+            <a href="literature.htm" class="section-link">К свиткам →</a>
+        </div>
+        <div class="section-card" data-aos="fade-up" data-aos-delay="200" style="flex: 1; min-width: 200px; max-width: 23%;">
+            <h3 class="section-title">🎮 Игры & Фильмы</h3>
+            <p class="section-text">God of War, Assassin's Creed Valhalla, Hellblade, сериал «Викинги», «Викинги: Вальхалла».</p>
+            <a href="games-films.htm" class="section-link">К драккару →</a>
+        </div>
+        <div class="section-card" data-aos="fade-up" data-aos-delay="300" style="flex: 1; min-width: 200px; max-width: 23%;">
+            <h3 class="section-title">🖼️ Галерея</h3>
+            <p class="section-text">Изображения богов, рунические камни, реконструкции храмов и атмосферные пейзажи фьордов.</p>
+            <a href="gallery.htm" class="section-link">Смотреть →</a>
+        </div>
+    </div>
+
+    <!-- СЛАЙДЕР ОТЗЫВОВ (Glide.js) -->
+    <div class="section-card" data-aos="fade-up" style="max-width: 600px; margin: 20px auto;">
+        <h3 style="text-align: center;">📖 Что говорят о мифологии</h3>
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <p>«Скандинавская мифология — это не просто сказки, это целое мировоззрение, где честь и судьба идут рука об руку.»</p>
+                        <p style="color: #d4af37; margin-top: 10px;">— Из комментариев</p>
+                    </li>
+                    <li class="glide__slide">
+                        <p>«Рагнарёк пугает, но в нём есть надежда на возрождение. Очень глубокий сюжет.»</p>
+                        <p style="color: #d4af37; margin-top: 10px;">— Посетитель сайта</p>
+                    </li>
+                    <li class="glide__slide">
+                        <p>«Один, Тор, Локи — эти имена знает весь мир. А вы знаете их настоящие истории?»</p>
+                        <p style="color: #d4af37; margin-top: 10px;">— Из форума</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider" data-aos="fade-in">
+
+    <h2 data-aos="fade-up">Статистика пантеона</h2>
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 20px; text-align: center;">
+        <div data-aos="zoom-in">
+            <div id="countAesir" style="font-size: 48px; color: #d4af37; font-weight: bold;">0</div>
+            <div>Богов-Асов</div>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="100">
+            <div id="CountVanir" style="font-size: 48px; color: #d4af37; font-weight: bold;">0</div>
+            <div>Богов-Ванов</div>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200">
+            <div id="countWorlds" style="font-size: 48px; color: #d4af37; font-weight: bold;">0</div>
+            <div>Девять миров</div>
+        </div>
+    </div>
+
+    <hr class="divider" data-aos="fade-in">
+
+    <h2 data-aos="fade-up">Девять миров Иггдрасиль</h2>
+
+    <table class="worlds-table" data-aos="zoom-in">
+        <tr>
+            <td><strong>Асгард</strong> — мир богов-асов</td>
+            <td><strong>Ванахейм</strong> — мир ванов (Фрейр, Фрейя)</td>
+        </tr>
+        <tr>
+            <td><strong>Мидгард</strong> — мир людей</td>
+            <td><strong>Ётунхейм</strong> — мир великанов-ётунов</td>
+        </tr>
+        <tr>
+            <td><strong>Нифльхейм</strong> — мир льда и тумана</td>
+            <td><strong>Муспельхейм</strong> — мир огня (Сурт)</td>
+        </tr>
+        <tr>
+            <td><strong>Свартальфахейм</strong> — мир цвергов (карликов)</td>
+            <td><strong>Хельхейм</strong> — мир мёртвых (Хель)</td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Льесальфахейм</strong> — мир светлых альвов</td>
+        </tr>
+    </table>
+    <div class="worlds-caption" data-aos="fade-up">Все миры держатся на ясене Иггдрасиль, у корней которого бьют источники мудрости и судьбы.</div>
+</main>
+
+<hr class="divider">
+
+<footer>
+    <div class="footer-text">© 2026 Saga Hall. Автор проекта: Попов Денис Александрович</div>
+    <div class="footer-text">Источники: <a href="https://norroen.info/" target="_blank">Северная слава</a> | <a href="https://ru.wikipedia.org/" target="_blank">Wikipedia</a> | Переводы Эдд: О. Смирницкая, М. Стеблин-Каменский</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

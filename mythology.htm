@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Hall — Мифология</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Tippy.js -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- ProgressBar.js -->
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+<body>
+
+<!-- РУНЫ НА ФОНЕ -->
+<div class="rune-futhark rune-1">ᚠ</div>
+<div class="rune-futhark rune-2">ᚢ</div>
+<div class="rune-futhark rune-3">ᚦ</div>
+<div class="rune-futhark rune-4">ᚨ</div>
+<div class="rune-futhark rune-5">ᚱ</div>
+<div class="rune-futhark rune-6">ᚲ</div>
+<div class="rune-futhark rune-7">ᚷ</div>
+<div class="rune-futhark rune-8">ᛟ</div>
+
+<header>
+    <div class="header-container">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="width: 150px; text-align: center;">
+                <img src="images/logo.png" alt="Saga Hall Logo" style="width: 120px; border: none;">
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <a href="index.htm" style="text-decoration: none;">
+                    <h1>ᛉ Saga Hall ᛟ</h1>
+                </a>
+            </div>
+            <div style="width: 150px;"></div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="index.htm">Главная</a>
+            <a href="mythology.htm">Мифология</a>
+            <a href="literature.htm">Литература</a>
+            <a href="games-films.htm">Игры & Фильмы</a>
+            <a href="gallery.htm">Галерея</a>
+            <a href="about.htm">О проекте</a>
+        </div>
+        <div class="search-box">
+            <form>
+                <input type="text" name="search" placeholder="Поиск...">
+                <input type="submit" value="Найти">
+            </form>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h1 data-aos="fade-up" style="text-align: center; margin: 30px 0 20px 0;">Скандинавская мифология</h1>
+    
+    <!-- ПРОГРЕСС-БАР УРОВНЯ ЗНАНИЙ -->
+    <div class="section-card" data-aos="fade-up" style="max-width: 500px; margin: 20px auto;">
+        <h3 style="text-align: center;">📊 Ваш уровень знания мифологии</h3>
+        <div id="mythology-progress" style="height: 30px; margin: 20px 0;"></div>
+        <div style="display: flex; justify-content: space-between;">
+            <span>🌱 Новичок</span>
+            <span>⚡ Знаток</span>
+            <span>🛡️ Скальд</span>
+        </div>
+        <button id="increase-knowledge" style="margin-top: 15px; padding: 8px 15px; background: #d4af37; border: none; border-radius: 5px; cursor: pointer;">➕ Изучить ещё сагу</button>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ДИАГРАММА ПАНТЕОНА (Chart.js) -->
+    <div data-aos="zoom-in" style="max-width: 500px; margin: 0 auto 40px; background: rgba(60,55,50,0.9); padding: 20px; border-radius: 15px; border: 2px solid #d4af37;">
+        <h3 style="text-align: center;">Пантеон богов</h3>
+        <canvas id="pantheonChart"></canvas>
+    </div>
+
+    <hr class="divider">
+
+    <!-- АСЫ -->
+    <section style="margin: 20px auto; max-width: 1000px; padding: 0 20px;">
+        <h2 data-aos="fade-right">Асы — главные боги</h2>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header tippy-tip" data-tippy-content="Верховный бог, бог мудрости и войны">⚡ Один</button>
+            <div class="accordion-content">
+                <p>Верховный бог, бог мудрости, войны, поэзии и магии. Отдал свой глаз за глоток из источника Мимира. Владеет копьём Гунгнир. Собирает павших воинов в Вальхаллу.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header tippy-tip" data-tippy-content="Защитник Мидгарда, бог грома">🔨 Тор</button>
+            <div class="accordion-content">
+                <p>Бог грома и молнии, защитник Мидгарда и Асгарда от великанов. Вооружён молотом Мьёльнир, который возвращается к нему после броска. Сын Одина.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header tippy-tip" data-tippy-content="Бог света и весны">✨ Бальдр</button>
+            <div class="accordion-content">
+                <p>Самый красивый и добрый из асов, бог весны и света. Его смерть от руки слепого Хёда (по вине Локи) станет началом Рагнарёка.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header tippy-tip" data-tippy-content="Бог воинской чести">⚔️ Тюр</button>
+            <div class="accordion-content">
+                <p>Однорукий бог воинской чести и правосудия. Лишился руки, когда скреплял договор с волком Фенриром.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header tippy-tip" data-tippy-content="Страж богов, охраняет Биврёст">🔭 Хеймдалль</button>
+            <div class="accordion-content">
+                <p>Страж богов, охраняет мост Биврёст (радугу). Трубит в рог Гьяллархорн, возвещая начало Рагнарёка.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🗡️ Видар</button>
+            <div class="accordion-content">
+                <p>Молчаливый бог мести. Во время Рагнарёка разорвёт пасть волку Фенриру, отомстив за Одина.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🏹 Вали</button>
+            <div class="accordion-content">
+                <p>Сын Одина, рождённый для мести за смерть Бальдра.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ВАНЫ -->
+    <section style="margin: 20px auto; max-width: 1000px; padding: 0 20px;">
+        <h2 data-aos="fade-left">Ваны — боги плодородия</h2>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🌊 Ньёрд</button>
+            <div class="accordion-content">
+                <p>Бог моря и ветра, покровитель мореплавателей. Отец Фрейра и Фрейи.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🌾 Фрейр</button>
+            <div class="accordion-content">
+                <p>Бог лета, урожая, мира и мужской силы. Владеет кораблём Скидбладнир и вепрем Гуллинбурсти.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">💖 Фрейя</button>
+            <div class="accordion-content">
+                <p>Богиня любви, красоты, плодородия и сейда (колдовства). Делит павших воинов с Одином (половина к ней в Фольквангр). Владеет ожерельем Брисингамен.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- СУЩЕСТВА -->
+    <section style="margin: 20px auto; max-width: 1000px; padding: 0 20px;">
+        <h2 data-aos="fade-right">Существа и чудовища</h2>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🐍 Ёрмунганд (Мировой Змей)</button>
+            <div class="accordion-content">
+                <p>Змей, рождённый Локи, обвивает весь Мидгард. В Рагнарёк убьёт Тора, но погибнет от его яда.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🐺 Фенрир</button>
+            <div class="accordion-content">
+                <p>Чудовищный волк, сын Локи. Проглотит Одина в Рагнарёк.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">💀 Хель</button>
+            <div class="accordion-content">
+                <p>Хозяйка мира мёртвых, дочь Локи. Половина её тела синяя, половина — цвета плоти.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🗻 Ётуны (великаны)</button>
+            <div class="accordion-content">
+                <p>Древние враги богов. Хримтурсы (инеистые великаны), огненные великаны Муспельхейма во главе с Суртом.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">⛏️ Цверги (карлики, гномы)</button>
+            <div class="accordion-content">
+                <p>Искусные кузнецы, живут в камне. Создали Мьёльнир, Гунгнир, золотые волосы Сиф.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🧝 Альвы</button>
+            <div class="accordion-content">
+                <p>Светлые (эльфы) и тёмные (цверги по сути).</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">⚔️ Валькирии</button>
+            <div class="accordion-content">
+                <p>Девы-воительницы, доставляющие павших героев в Вальхаллу.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- КОСМОГОНИЯ -->
+    <section style="margin: 20px auto; max-width: 1000px; padding: 0 20px;">
+        <h2 data-aos="fade-left">Космогония и Рагнарёк</h2>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header">🌍 Сотворение мира</button>
+            <div class="accordion-content">
+                <p>В начале была бездна Гиннунгагап. На севере — Нифльхейм (лёд), на юге — Муспельхейм (огонь). Из искр и тающего льда возник великан Имир. Из его тела Один и братья создали мир: из плоти — землю, из крови — море, из черепа — небо.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" data-aos="fade-up">
+            <button class="accordion-header" style="border-left-color: #ff4444;">🔥 Рагнарёк — Гибель богов</button>
+            <div class="accordion-content">
+                <p><strong>Предзнаменования:</strong> смерть Бальдра, три зимы подряд (Фимбулвинтер). Придут великаны и чудовища. Сурт сожжёт мир огнём. В битве погибнут почти все боги: Один (от Фенрира), Тор (от Ёрмунганда), Фрейр (от Сурта).</p>
+                <p><strong>Возрождение:</strong> Но мир возродится заново, а выжившие (Бальдр, Хёд, сыновья Тора) встретятся в новом Асгарде.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<hr class="divider">
+
+<footer>
+    <div class="footer-text">© 2026 Saga Hall. Автор проекта: Попов Денис Александрович</div>
+    <div class="footer-text">Источники: <a href="https://norroen.info/" target="_blank">Северная слава</a> | <a href="https://ru.wikipedia.org/" target="_blank">Wikipedia</a> | Переводы Эдд: О. Смирницкая, М. Стеблин-Каменский</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

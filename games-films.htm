@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Hall — Игры и Фильмы</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Tippy.js -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+<body>
+
+<!-- РУНЫ НА ФОНЕ -->
+<div class="rune-futhark rune-1">ᚠ</div>
+<div class="rune-futhark rune-2">ᚢ</div>
+<div class="rune-futhark rune-3">ᚦ</div>
+<div class="rune-futhark rune-4">ᚨ</div>
+<div class="rune-futhark rune-5">ᚱ</div>
+<div class="rune-futhark rune-6">ᚲ</div>
+<div class="rune-futhark rune-7">ᚷ</div>
+<div class="rune-futhark rune-8">ᛟ</div>
+
+<header>
+    <div class="header-container">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="width: 150px; text-align: center;">
+                <img src="images/logo.png" alt="Saga Hall Logo" style="width: 120px; border: none;">
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <a href="index.htm" style="text-decoration: none;">
+                    <h1>ᛉ Saga Hall ᛟ</h1>
+                </a>
+            </div>
+            <div style="width: 150px;"></div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="index.htm">Главная</a>
+            <a href="mythology.htm">Мифология</a>
+            <a href="literature.htm">Литература</a>
+            <a href="games-films.htm">Игры & Фильмы</a>
+            <a href="gallery.htm">Галерея</a>
+            <a href="about.htm">О проекте</a>
+        </div>
+        <div class="search-box">
+            <form>
+                <input type="text" name="search" placeholder="Поиск...">
+                <input type="submit" value="Найти">
+            </form>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h1 data-aos="fade-up" style="text-align: center; margin: 30px 0 20px 0;">Игры и Фильмы по скандинавской мифологии</h1>
+    <p data-aos="fade-up" style="text-align: center; margin-bottom: 30px;">Где мифология оживает на экранах и в геймпадах.</p>
+
+    <!-- ИГРЫ -->
+    <section style="margin: 20px auto; max-width: 1000px; padding: 0 20px;">
+        <h2 data-aos="fade-right">🎮 Игры</h2>
+        
+        <!-- God of War -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/god-of-war.jpg" alt="God of War" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3 class="tippy-tip" data-tippy-content="Экшен от Santa Monica Studio">God of War (2018) и God of War: Ragnarök (2022)</h3>
+                <p><strong>Жанр:</strong> Экшен, приключение</p>
+                <p><strong>Разработчик:</strong> Santa Monica Studio</p>
+                <p><strong>Описание:</strong> Кратос и его сын Атрей путешествуют по девяти мирам, встречают богов (Один, Тор, Фрейя), существ и чудовищ. Вольная, но глубокая адаптация мифологии, особенно в части Рагнарёка.</p>
+                <p><strong>Оценка сайта:</strong> ⭐ 10/10</p>
+                <a href="https://www.youtube.com/watch?v=K0u_kAWLJOA" target="_blank" class="section-link">Трейлер →</a>
+            </div>
+        </div>
+        
+        <!-- Assassin's Creed Valhalla -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/ac-valhalla.jpg" alt="Assassin's Creed Valhalla" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3>Assassin's Creed: Valhalla</h3>
+                <p><strong>Жанр:</strong> RPG, открытый мир</p>
+                <p><strong>Разработчик:</strong> Ubisoft</p>
+                <p><strong>Описание:</strong> Про викингов, вторжение в Англию, но с мифологическим уклоном: сны-видения, сюжетные линии с Одином, Тором, посещение Асгарда и Ётунхейма.</p>
+                <p><strong>Оценка сайта:</strong> ⭐ 8/10</p>
+                <a href="https://www.youtube.com/watch?v=ssrNcwxALS4" target="_blank" class="section-link">Трейлер →</a>
+            </div>
+        </div>
+        
+        <!-- Hellblade -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/hellblade.jpg" alt="Hellblade" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3>Hellblade: Senua's Sacrifice</h3>
+                <p><strong>Жанр:</strong> Психологический хоррор, экшен</p>
+                <p><strong>Разработчик:</strong> Ninja Theory</p>
+                <p><strong>Описание:</strong> Кельтская воительница Сенуа отправляется в Хельхейм, чтобы спасти душу погибшего возлюбленного. Глубокая проработка психоза и атмосфера скандинавской загробной жизни.</p>
+                <p><strong>Оценка сайта:</strong> ⭐ 9/10</p>
+                <a href="https://www.youtube.com/watch?v=5xnC9g6zmZk" target="_blank" class="section-link">Трейлер →</a>
+            </div>
+        </div>
+        
+        <!-- Jotun -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/jotun.jpg" alt="Jotun" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3>Jotun</h3>
+                <p><strong>Жанр:</strong> Инди, экшен</p>
+                <p><strong>Описание:</strong> Рукотворная анимация, игра про викингшу, которая доказывает богам свою силу, сражаясь с великанами (ётунами).</p>
+                <a href="https://www.youtube.com/watch?v=feRTFXwC9tU" target="_blank" class="section-link">Трейлер →</a>
+            </div>
+        </div>
+        
+        <!-- Valheim -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/valheim.jpg" alt="Valheim" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3>Valheim</h3>
+                <p><strong>Жанр:</strong> Выживание, песочница</p>
+                <p><strong>Описание:</strong> Викинги в чистилище должны убить чудовищ и боссов (Эйктюр, Третий, Бономасс, Модер, Яглут). Атмосфера, отсылки к мифологии.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ФИЛЬМЫ И СЕРИАЛЫ -->
+    <section style="margin: 20px auto; max-width: 1000px; padding: 0 20px;">
+        <h2 data-aos="fade-left">🎬 Фильмы и сериалы</h2>
+        
+        <!-- Викинги -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/vikings.jpg" alt="Викинги" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3>Викинги (Vikings, 2013-2020)</h3>
+                <p><strong>Жанр:</strong> Историческая драма</p>
+                <p><strong>Создатель:</strong> Майкл Хёрст</p>
+                <p><strong>Описание:</strong> Про Рагнара Лодброка и его потомков. Мифология присутствует через видения, пророчества и разговоры с богами.</p>
+                <p><strong>Рекомендация:</strong> Первые 4 сезона.</p>
+                <a href="https://www.youtube.com/watch?v=9GgxinPwAGc" target="_blank" class="section-link">Трейлер →</a>
+            </div>
+        </div>
+        
+        <!-- Викинги: Вальхалла -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/vikings-valhalla.jpg" alt="Викинги: Вальхалла" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3>Викинги: Вальхалла (Vikings: Valhalla, 2022)</h3>
+                <p><strong>Жанр:</strong> Историческая драма</p>
+                <p><strong>Описание:</strong> Продолжение, действие через 100 лет. Лейф Счастливый, Фрейдис, Харальд Суровый. Язычники против христиан.</p>
+                <a href="https://www.youtube.com/watch?v=HaxO3h4wL1M" target="_blank" class="section-link">Трейлер →</a>
+            </div>
+        </div>
+        
+        <!-- Тор -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/thor-ragnarok.jpg" alt="Тор: Рагнарёк" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3>Тор (Thor, 2011) и Тор: Рагнарёк (2017)</h3>
+                <p><strong>Жанр:</strong> Фэнтези, супергероика</p>
+                <p><strong>Описание:</strong> Вольная адаптация Marvel. Рагнарёк как гибель Асгарда от огненного демона Сурта (сильно изменено). Развлекательно, но не исторично.</p>
+            </div>
+        </div>
+        
+        <!-- Северянин -->
+        <div class="section-card" data-aos="fade-up" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 0 0 150px; text-align: center;">
+                <img src="images/the-northman.jpg" alt="Северянин" style="width: 100%; border: 2px solid #d4af37; border-radius: 8px;">
+            </div>
+            <div style="flex: 1;">
+                <h3>Северянин (The Northman, 2022)</h3>
+                <p><strong>Жанр:</strong> Исторический боевик</p>
+                <p><strong>Режиссёр:</strong> Роберт Эггерс</p>
+                <p><strong>Описание:</strong> Максимально аутентичный фильм о викингах (месть Амлета). Есть элементы ритуалов, сцены с вёльвой, намёки на мифологию.</p>
+                <p><strong>Оценка:</strong> ⭐ 10/10 за атмосферу.</p>
+                <a href="https://www.youtube.com/watch?v=oMSdFM12hOw" target="_blank" class="section-link">Трейлер →</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<hr class="divider">
+
+<footer>
+    <div class="footer-text">© 2026 Saga Hall. Автор проекта: Попов Денис Александрович</div>
+    <div class="footer-text">Источники: <a href="https://norroen.info/" target="_blank">Северная слава</a> | <a href="https://ru.wikipedia.org/" target="_blank">Wikipedia</a> | Переводы Эдд: О. Смирницкая, М. Стеблин-Каменский</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
